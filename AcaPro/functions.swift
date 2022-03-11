@@ -34,13 +34,17 @@ func formatar_referencias() -> String{
     switch option{
         case 1:
             print("Livro.\n")
-            print(formatar_referencia_livro())
+            formatar_referencia_livro()
             continue_loop = false
+        
         case 2:
-            print("Revista\n")
+            print("Revista ou periódico\n")
+            let referencia_livro_ou_periodico = RevistaOuPeriodico()
+            print(referencia_livro_ou_periodico)
             continue_loop = false
+        
         case 3:
-            print("Artigos ou periódicos\n")
+            print("Artigos\n")
             continue_loop = false
         case 4:
             print("Websites")
@@ -54,9 +58,7 @@ func formatar_referencias() -> String{
     return "\(option)"
     
 }
-func choose_option(menu: [String], int:option){
-    
-}
+
 func formatar_referencia_livro(){
     _ = Livro()
 }

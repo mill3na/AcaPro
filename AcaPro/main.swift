@@ -8,7 +8,7 @@
 import Foundation
 
 var primeiro_menu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
-var materiais = ["Livro", "Revista", "Artigos ou periódicos", "Websites"]
+var materiais = ["Livro", "Revista ou periódico", "Artigos", "Websites"]
 
 print("Olá, User! Pronto para começar?\n\n")
 
@@ -21,10 +21,10 @@ while(continue_loop){
     switch user_option{
         case 1:
             print("Guia do usuário\n")
-            print(formatar_referencias())
             continue_loop = false
         case 2:
             print("Formatar referências\n")
+            print(formatar_referencias())
             continue_loop = false
 
         case 3:
