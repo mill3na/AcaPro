@@ -8,7 +8,7 @@
 import Foundation
 
 var primeiro_menu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
-var materiais = ["Livro", "Revista ou periódico", "Artigos", "Websites"]
+var materiais = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "Websites"]
 
 print("Olá, User! Pronto para começar?\n\n")
 

@@ -34,20 +34,30 @@ func formatar_referencias() -> String{
     switch option{
         case 1:
             print("Livro.\n")
-            formatar_referencia_livro()
+            let referencia_livro = Livro()
+            print(referencia_livro)
             continue_loop = false
         
         case 2:
-            print("Revista ou periódico\n")
-            let referencia_livro_ou_periodico = RevistaOuPeriodico()
-            print(referencia_livro_ou_periodico)
+            print("Revista ou artigo de periódico\n")
+            let referencia_revista_ou_periodico = RevistaOuPeriodico()
+            print(referencia_revista_ou_periodico)
             continue_loop = false
         
         case 3:
-            print("Artigos\n")
+            print("Artigo em evento\n")
+            let referencia_artigo_em_evento = ArtigoEmEvento()
+            print(referencia_artigo_em_evento)
             continue_loop = false
         case 4:
             print("Websites")
+            let referencia_websites = Websites()
+            print(referencia_websites)
+            continue_loop = false
+        case 5:
+            print("Monografia, dissertação ou tese\n")
+            let referencia_monografia_dissertacao_tese = MonografiaDissertacaoTese()
+            print(referencia_monografia_dissertacao_tese)
             continue_loop = false
 
         default:
@@ -59,6 +69,3 @@ func formatar_referencias() -> String{
     
 }
 
-func formatar_referencia_livro(){
-    _ = Livro()
-}

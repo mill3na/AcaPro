@@ -9,9 +9,12 @@ import Foundation
 
 struct Livro {
     init() {
-        let numero_de_autores = readInt(message: "De quantos autores estamos falando? ")
+        let numero_de_autores = readInt(message: "De quantos autores estamos falando? Digite 0 para autor desconhecido: ")
         
-        if numero_de_autores == 1{
+        if numero_de_autores == 0 {
+            print("\n\n\(autor_desconhecido())")
+        }
+        else if numero_de_autores == 1{
             print("\n\n\(um_autor())")
         } else if numero_de_autores == 2 {
             print("\n\n\(dois_autores())")
@@ -154,6 +157,13 @@ struct Livro {
         }
         }
     
-    
-
+    func autor_desconhecido() -> String {
+        let titulo_da_obra = readString(message: "Digite o título do livro: ")
+        let local_de_publicação = readString(message: "Digite o local de publicação: ")
+        let editora = readString(message: "Digite a editora: ")
+        let ano_de_publicação = readString(message: "Digite o ano de publicação: ")
+        
+        return "Referência formatada: \n \(titulo_da_obra.uppercased()). \(local_de_publicação): \(editora), \(ano_de_publicação)."
+    }
 }
+    
