@@ -7,38 +7,42 @@
 
 import Foundation
 
-var primeiro_menu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
-var materiais = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "Websites"]
+
+var primeiroMenu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
+var fontes = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "Websites", "Monografia, dissertação ou tese"]
 
 print("Olá, User! Pronto para começar?\n\n")
 
-print_menu(menu: primeiro_menu)
+var continueLoop = true
 
-var continue_loop = true
+while(continueLoop){
+    printMenu(menu: primeiroMenu)
+    let opcaoUsuario = lerInt(message: "Por favor, escolha uma das opções.  ")
 
-while(continue_loop){
-    let user_option = readInt(message: "Por favor, escolha uma das opções a seguir:  ")
-    switch user_option{
+    switch opcaoUsuario{
         case 1:
             print("Guia do usuário\n")
-            continue_loop = false
+            print(areasDePesquisa)
+            continueLoop = false
         case 2:
             print("Formatar referências\n")
-            print(formatar_referencias())
-            continue_loop = false
+            print(formatarReferencias())
+            continueLoop = false
 
         case 3:
             print("Buscar eixos de pesquisa\n")
-            continue_loop = false
+            print(areasDePesquisa)
+            continueLoop = false
         case 4:
             print("Tipos de referência\n")
-            continue_loop = false
+            print(tiposDeReferencia)
+            continueLoop = false
         case 5:
             print("Processo de desenvolvimento\n")
-            continue_loop = false
+            continueLoop = false
         case 6:
             print("Sair\nAté logo!\n")
-            continue_loop = false
+            continueLoop = false
         default: print("Por favor, tente novamente!")
             
         }

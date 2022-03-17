@@ -14,6 +14,7 @@
 		F8525E9F27DF6AFA001B2646 /* struct_websites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8525E9E27DF6AFA001B2646 /* struct_websites.swift */; };
 		F898E14627D8C31D00F0EAD3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898E14527D8C31D00F0EAD3 /* main.swift */; };
 		F898E14F27D8DC4C00F0EAD3 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898E14E27D8DC4C00F0EAD3 /* functions.swift */; };
+		F8A55DEC27E34C5F00CC2A2A /* multiline_strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A55DEB27E34C5F00CC2A2A /* multiline_strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		F898E14227D8C31D00F0EAD3 /* AcaPro */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AcaPro; sourceTree = BUILT_PRODUCTS_DIR; };
 		F898E14527D8C31D00F0EAD3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F898E14E27D8DC4C00F0EAD3 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		F8A55DEB27E34C5F00CC2A2A /* multiline_strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiline_strings.swift; sourceTree = "<group>"; };
+		F8A55DF027E35DCD00CC2A2A /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +73,40 @@
 			isa = PBXGroup;
 			children = (
 				F898E14527D8C31D00F0EAD3 /* main.swift */,
-				F898E14E27D8DC4C00F0EAD3 /* functions.swift */,
+				F8C8F80D27E0B749004F502C /* src */,
+				F8A55DF027E35DCD00CC2A2A /* readme.md */,
+			);
+			path = AcaPro;
+			sourceTree = "<group>";
+		};
+		F8C8F80D27E0B749004F502C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8F81027E0B800004F502C /* functions */,
+				F8C8F80F27E0B7E3004F502C /* struct */,
+				F8A55DEB27E34C5F00CC2A2A /* multiline_strings.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F8C8F80F27E0B7E3004F502C /* struct */ = {
+			isa = PBXGroup;
+			children = (
 				F8251FA927DA319800D6EEC7 /* struct_livro.swift */,
 				F84610D327DB94620080B269 /* struct_revista_periodico.swift */,
 				F8525E9A27DF5F6E001B2646 /* struct_artigo_em_evento.swift */,
 				F8525E9C27DF6700001B2646 /* struct_monografia_dissertacao_tese.swift */,
 				F8525E9E27DF6AFA001B2646 /* struct_websites.swift */,
 			);
-			path = AcaPro;
+			path = struct;
+			sourceTree = "<group>";
+		};
+		F8C8F81027E0B800004F502C /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				F898E14E27D8DC4C00F0EAD3 /* functions.swift */,
+			);
+			path = functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +173,7 @@
 				F898E14F27D8DC4C00F0EAD3 /* functions.swift in Sources */,
 				F8251FAA27DA319800D6EEC7 /* struct_livro.swift in Sources */,
 				F8525E9D27DF6700001B2646 /* struct_monografia_dissertacao_tese.swift in Sources */,
+				F8A55DEC27E34C5F00CC2A2A /* multiline_strings.swift in Sources */,
 				F8525E9F27DF6AFA001B2646 /* struct_websites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
