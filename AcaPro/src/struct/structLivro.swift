@@ -23,7 +23,9 @@ struct Livro {
             print("\n\n\(tresAutores())")
         } else if numeroAutores > 3 {
             print("\n\n\(muitosAutores())")
-        } else {
+        } else if numeroAutores == -1{
+            print("Entrada inválida. Por favor, tente novamente.")
+        }else {
             print("Opção inválida. ")
         }
     }
@@ -58,32 +60,32 @@ struct Livro {
         
     }
     func umAutor() -> String {
-        let nomeSobrenome = nomeESobrenome()
+        let nomeSobrenome = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let complementoReferencia = informacoesBasicasLivro()
-        return "Referência formatada: \n\(nomeSobrenome). \(complementoReferencia)"
+        return "\n\(nomeSobrenome). \(complementoReferencia)"
         }
     
     func doisAutores() -> String {
-        let nomeSobrenomePrimeiroAutor = nomeESobrenome()
-        let nomeSobrenomeSegundoAutor = nomeESobrenome()
+        let nomeSobrenomePrimeiroAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
+        let nomeSobrenomeSegundoAutor = nomeESobrenome(cardinalidadeAutor: "segundo")
         let complementoReferencia = informacoesBasicasLivro()
-        return "Referência formatada: \n \(nomeSobrenomePrimeiroAutor); \(nomeSobrenomeSegundoAutor). \(complementoReferencia)"
+        return "\n\(nomeSobrenomePrimeiroAutor); \(nomeSobrenomeSegundoAutor). \(complementoReferencia)"
         
         }
     
     func tresAutores() -> String {
-        let nomeSobrenomePrimeiroAutor = nomeESobrenome()
-        let nomeSobrenomeSegundoAutor = nomeESobrenome()
-        let nomeSobrenomeTerceiroAutor = nomeESobrenome()
+        let nomeSobrenomePrimeiroAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
+        let nomeSobrenomeSegundoAutor = nomeESobrenome(cardinalidadeAutor: "segundo")
+        let nomeSobrenomeTerceiroAutor = nomeESobrenome(cardinalidadeAutor: "terceiro")
         let complementoReferencia = informacoesBasicasLivro()
-        return "Referência formatada: \n \(nomeSobrenomePrimeiroAutor); \(nomeSobrenomeSegundoAutor); \(nomeSobrenomeTerceiroAutor). \(complementoReferencia)"
+        return "\n\(nomeSobrenomePrimeiroAutor); \(nomeSobrenomeSegundoAutor); \(nomeSobrenomeTerceiroAutor). \(complementoReferencia)"
         
         }
     
     func muitosAutores() -> String {
-        let nomeSobrenomeAutor = nomeESobrenome()
+        let nomeSobrenomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let complementoReferencia = informacoesBasicasLivro()
-            return "Referência formatada: \n \(nomeSobrenomeAutor) et al. \(complementoReferencia)"
+            return "\n\(nomeSobrenomeAutor) et al. \(complementoReferencia)"
         
         }
     
@@ -93,7 +95,7 @@ struct Livro {
         let editora = lerString(message: "Digite a editora: ", primeiraMaiuscula: true)
         let anoPublicação = lerInt(message: "Digite o ano de publicação: ")
         
-        return "Referência formatada: \n \(tituloObra.uppercased()). \(localPublicação): \(editora), \(anoPublicação)."
+        return "n\(tituloObra.uppercased()). \(localPublicação): \(editora), \(anoPublicação)."
     }
 }
 

@@ -15,7 +15,7 @@ struct ArtigoEmEvento {
     }
     
     func referenciaArtigoEmEvento() -> String {
-        let nomeSobrenomeAutor = nomeESobrenome()
+        let nomeSobrenomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let informacoesBasicas = informacoesBasicasArtigoEmEvento()
         
         return "Referência formatada: \n \(nomeSobrenomeAutor). \(informacoesBasicas)"

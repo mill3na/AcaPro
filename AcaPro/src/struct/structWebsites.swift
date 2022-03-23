@@ -68,7 +68,7 @@ struct Websites {
         let secaoSite = lerString(message: "Sua pesquisa está em uma seção específica [S/N]? ", primeiraMaiuscula: true)
         
         if (autoriaConhecida.uppercased() == "S") && (cidade.uppercased() == "S") && (secaoSite.uppercased() == "S") {
-            let nomeAutor = nomeESobrenome()
+            let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
             let cidadePublicacao = lerString(message: "Digite a cidade de publicação: ", primeiraMaiuscula: true)
             let secao = lerString(message: "Digite a seção: ", primeiraMaiuscula: true)
             
@@ -76,14 +76,14 @@ struct Websites {
         }
         
         else if (autoriaConhecida.uppercased() == "S") && (cidade.uppercased() == "S") && (secaoSite.uppercased() == "N") {
-            let nomeAutor = nomeESobrenome()
+            let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
             let cidadePublicacao = lerString(message: "Digite a cidade de publicação: ", primeiraMaiuscula: true)
             
             return "Referência formatada: \n \(nomeAutor). \(tituloMateria). \(nomeJornal), \(cidadePublicacao), \(diaPublicacao) \(mesPublicacao). \(anoPublicacao). Disponível em: \(url). \(diaMesAno)"
         }
         
        else if (autoriaConhecida.uppercased() == "S") && (cidade.uppercased() == "N") && (secaoSite.uppercased() == "S") {
-            let nomeAutor = nomeESobrenome()
+            let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
             let secao = lerString(message: "Digite a seção: ", primeiraMaiuscula: true)
             
             return "Referência formatada: \n \(nomeAutor). \(tituloMateria). \(nomeJornal), \(diaPublicacao) \(mesPublicacao). \(anoPublicacao). Seção \(secao). Disponível em: \(url). \(diaMesAno)"
@@ -91,7 +91,7 @@ struct Websites {
         
         else if (autoriaConhecida.uppercased() == "S") && (cidade.uppercased() == "N") && (secaoSite.uppercased() == "N") {
             
-            let nomeAutor = nomeESobrenome()
+            let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
             
             return "Referência formatada: \n \(nomeAutor). \(tituloMateria). \(nomeJornal), \(diaPublicacao) \(mesPublicacao). \(anoPublicacao). Disponível em: \(url). \(diaMesAno)"
         }
@@ -125,7 +125,7 @@ struct Websites {
     }
     
     func siteDeRevistasEletronicas() -> String {
-        let nomeAutor = nomeESobrenome()
+        let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let tituloArtigo = lerString(message: "Digite o título do artigo: ", primeiraMaiuscula: true)
         let tituloRevista = lerString(message: "Digite o título da revista: ", primeiraMaiuscula: true)
         let localPublicacao = lerString(message: "Digite o local de publicação: ", primeiraMaiuscula: true)
@@ -150,7 +150,7 @@ struct Websites {
         
         let tem_autor = lerString(message: "Você tem acesso ao nome do autor [S/N]? ", primeiraMaiuscula: true)
         if tem_autor.uppercased() == "S"{
-            let nomeAutor = nomeESobrenome()
+            let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
             return "Referência formatada: \n\(nomeAutor). \(tituloMateria). \(nomeSite), \(anoPublicacao). Disponível em: \(url). \(diaMesAno)"
         }
         else{
@@ -177,7 +177,7 @@ struct Websites {
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
         let diaMesAno = diaMesAnoDeAcesso()
                 
-        return "Referência formatada: \n \(tituloVerbeteConceito.uppercased()). In: \(nome_da_enciclopedia_dicionario). \(autorEditora), \(anoPublicacao). Disponível em: \(url). \(diaMesAno)."
+        return "\n\(tituloVerbeteConceito.uppercased()). In: \(nome_da_enciclopedia_dicionario). \(autorEditora), \(anoPublicacao). Disponível em: \(url). \(diaMesAno)."
     }
 
         

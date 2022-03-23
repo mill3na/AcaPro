@@ -6,6 +6,8 @@
 //
 
 import Foundation
+var primeiroMenu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
+var fontes = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "Websites", "Monografia, dissertação ou tese", "Voltar"]
 
 let acapro = """
 

@@ -14,9 +14,9 @@ struct RevistaOuPeriodico {
     }
     
     func referenciaRevistaOuPeriodico() -> String {
-        let nomeAutor = nomeESobrenome()
+        let nomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let complementoReferencia = informacoesBasicasRevistaOuPeriodico()
-        return "Referência formatada: \n\(nomeAutor). \(complementoReferencia)."
+        return "\n\(nomeAutor). \(complementoReferencia)."
     
     }
 }

@@ -15,9 +15,9 @@ struct MonografiaDissertacaoTese {
     }
     
     func monografiaDissertacaoTese() -> String {
-        let nomeSobrenomeAutor = nomeESobrenome()
+        let nomeSobrenomeAutor = nomeESobrenome(cardinalidadeAutor: "primeiro")
         let informacoesComplementares = informacoesBasicasMonografiaDissertacaoTese()
-        return "Referência formatada: \n\(nomeSobrenomeAutor). \(informacoesComplementares)"
+        return "\n\(nomeSobrenomeAutor). \(informacoesComplementares)"
 }
 
 }
