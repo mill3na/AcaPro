@@ -13,7 +13,9 @@ var fontes = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "W
 
 print("Olá, User! Pronto para começar?\n\n")
 
-var continueLoop = true
+var continueLoop = false
+
+criarArquivo()
 
 while(continueLoop){
     printMenu(menu: primeiroMenu)
@@ -22,24 +24,19 @@ while(continueLoop){
     switch opcaoUsuario{
         case 1:
             print("Guia do usuário\n")
-            print(areasDePesquisa)
-            continueLoop = false
+            printStepByStep(multilineString: guiaDoUsuario)
         case 2:
             print("Formatar referências\n")
             print(formatarReferencias())
-            continueLoop = false
-
         case 3:
             print("Buscar eixos de pesquisa\n")
             print(areasDePesquisa)
-            continueLoop = false
         case 4:
             print("Tipos de referência\n")
-            print(tiposDeReferencia)
-            continueLoop = false
+            printStepByStep(multilineString: referencia)
         case 5:
             print("Processo de desenvolvimento\n")
-            continueLoop = false
+            printStepByStep(multilineString: desenvolvimento)
         case 6:
             print("Sair\nAté logo!\n")
             continueLoop = false

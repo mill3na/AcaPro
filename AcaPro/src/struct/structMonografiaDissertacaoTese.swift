@@ -23,18 +23,18 @@ struct MonografiaDissertacaoTese {
 }
 
 func informacoesBasicasMonografiaDissertacaoTese() -> String {
-    let tituloTrabalho = lerString(message: "Digite o título do trabalho: ")
-    let anoApresentacao = lerString(message: "Digite o ano de apresentação: ")
+    let tituloTrabalho = lerString(message: "Digite o título do trabalho: ", primeiraMaiuscula: true)
+    let anoApresentacao = lerString(message: "Digite o ano de apresentação: ", primeiraMaiuscula: true)
     let numeroPaginas = lerInt(message: "Digite o total de páginas: ")
-    let categoria = lerString(message: "Digite a categoria (área de concentração): ")
-    let instituição = lerString(message: "Digite a instituição: ")
-    let localPublicacao = lerString(message: "Digite o local de publicação: ")
+    let categoria = lerString(message: "Digite a categoria (área de concentração): ", primeiraMaiuscula: true)
+    let instituição = lerString(message: "Digite a instituição: ", primeiraMaiuscula: true)
+    let localPublicacao = lerString(message: "Digite o local de publicação: ", primeiraMaiuscula: true)
     let anoDefesa = lerInt(message: "Digite o ano de defesa: ")
 
-    let temSubtitulo = lerString(message: "Esse trabalho tem subtítulo [S/N]? ")
+    let temSubtitulo = lerString(message: "Esse trabalho tem subtítulo [S/N]? ", primeiraMaiuscula: true)
     
     if temSubtitulo.uppercased() == "S"{
-        let subtituloTrabalho = lerString(message: "Digite o subtítulo: ")
+        let subtituloTrabalho = lerString(message: "Digite o subtítulo: ", primeiraMaiuscula: true)
         return "\(tituloTrabalho): \(subtituloTrabalho). \(anoApresentacao). \(numeroPaginas). \(categoria) - \(instituição), \(localPublicacao), \(anoDefesa)."
     }
     else{

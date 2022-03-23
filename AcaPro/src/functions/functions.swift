@@ -12,28 +12,49 @@ func printMenu(menu: [String]){
     }
 }
 
+func printStepByStep(multilineString: [String]){
+    for opcao in multilineString{
+        print(opcao)
+        sleep(1)
+        let continuar = lerString(message: "Continuar [S/N]? ", true)
+        if continuar.uppercased() == "N"{
+            print("\nSaindo do guia.. Até logo!")
+            break
+        }
+    }
+}
+
 func lerInt(message:String) -> Int {
     print(message)
     let number = Int(readLine() ?? "0")!
-    print("Sua escolha: \(number)\n\n")
     return number
 }
 
-func lerString(message:String) -> String {
+func lerString(message:String, primeiraMaiuscula:Bool) -> String {
     print(message)
-    let text = String(readLine() ?? " ")
-    print("Sua escolha: \(text).\n\n")
+    var text = String(readLine() ?? " ")
+    if primeiraMaiuscula{
+        text = capitalizingFirstLetter(string: text)
+    }
     return text
 }
 
+func capitalizingFirstLetter(string:String) -> String {
+        let first = String(string.prefix(1)).capitalized
+        let other = String(string.dropFirst())
+        return first + other
+    }
 func formatarReferencias(){
     
     continueLoop = true
     while(continueLoop){
         
         printMenu(menu: fontes)
-        let option = lerInt(message: "Por favor, especifique a fonte: ")
+        let option = lerInt(message: "\nDigite 0 para voltar ao menu anterior. \nPor favor, especifique a fonte: ")
     switch option{
+        case 0:
+            print("Voltando ao menu principal...")
+            break
         case 1:
             let referenciaLivro = Livro()
             print(referenciaLivro)
@@ -66,40 +87,11 @@ func formatarReferencias(){
 }
 
 func nomeESobrenome() -> String {
-    let nomeDoAutor = lerString(message: "Digite o nome do autor: ")
-    let sobrenomeDoAutor = lerString(message: "Digite o sobrenome do autor: ")
+    let nomeDoAutor = lerString(message: "Digite o nome do autor: ", true)
+    let sobrenomeDoAutor = lerString(message: "Digite o sobrenome do autor: ", true)
     return "\(sobrenomeDoAutor.uppercased()), \(nomeDoAutor)"
 }
 
-func informacoesBasicasLivro() -> String {
-    let tituloDaObra = lerString(message: "Digite o título do livro: ")
-    let localPublicação = lerString(message: "Digite o local de publicação: ")
-    let editora = lerString(message: "Digite a editora: ")
-    let anoPublicação = lerString(message: "Digite o ano de publicação: ")
-    let temSubtitulo = lerString(message: "Esse livro tem subtítulo [S/N]? ")
-    let temEdicao = lerString(message: "Essa obra tem edição [S/N]? ")
-    
-    if (temSubtitulo.uppercased() == "S") && (temEdicao.uppercased() == "S") {
-        let subtituloObra = lerString(message: "Digite o subtitulo da obra: ")
-        let edicaoObra = lerString(message: "Digite a edição (somente o número): ")
-        return "\(tituloDaObra): \(subtituloObra). \(edicaoObra). ed. \(localPublicação): \(editora), \(anoPublicação)."
-    }
-    
-    else if (temSubtitulo.uppercased() == "S") && (temEdicao.uppercased() == "N") {
-        let subtituloObra = lerString(message: "Digite o subtitulo da obra: ")
-        return "\(tituloDaObra): \(subtituloObra). \(localPublicação): \(editora), \(anoPublicação)."
-    }
-    
-    else if (temSubtitulo.uppercased() == "N") && (temEdicao.uppercased() == "S"){
-        let edicaoObra = lerString(message: "Digite a edição (somente o número): ")
-        return "\(tituloDaObra). \(edicaoObra). ed. \(localPublicação): \(editora), \(anoPublicação)."
-    }
-    
-    else {
-        return "\(tituloDaObra). \(localPublicação): \(editora), \(anoPublicação)."
-    }
-    
-}
 
 func buscarEixosDePesquisa(){
     let menuPrincipalEixosDePesquisa = ["Áreas de pesquisa", "Palavras chave", "Sair"]
