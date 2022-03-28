@@ -60,7 +60,7 @@ struct Livro {
         
     }
     func umAutor() -> String {
-        let nomeSobrenome = nomeESobrenome(cardinalidadeAutor: "primeiro")
+        let nomeSobrenome = nomeESobrenome(cardinalidadeAutor: "")
         let complementoReferencia = informacoesBasicasLivro()
         return "\n\(nomeSobrenome). \(complementoReferencia)"
         }

@@ -31,7 +31,7 @@ Seja bem vindo ao guia do usuário. Aqui você encontra todas as informações p
          
             - Buscar referências ou eixos de pesquisa, caso esteja travado ou sem inspiração
             
-            - Formatar referências para sua produção acadêmica e falicitar sua vida (é só dar Ctrl + c e Ctrl + v, no final :)
+            - Formatar referências para sua produção acadêmica e falicitar sua vida (é só dar Ctrl + c e Ctrl + v, no final :) )
             
             - Exibir fontes confiáveis para pesquisa acadêmica, caso você precise.
 
@@ -52,11 +52,11 @@ let primeirosPassos = """
        [5]: Processo de desenvolvimento
        [5]: Sair
    
-   A última opção do primeiro menu é "Sair", e isso interrompe a execução desse script, ok? Outra coisa a lembrar é: sempre acesse as opções pelo número antes dela.
+   A última opção do primeiro menu é "Sair", e isso interrompe a execução desse script, ok? Lembre-se: sempre acesse as opções pelo número antes dela e, caso tenha formatado alguma referência durante a execução, salve-a em algum arquivo, pois este programa não implementa a persistência de dados.
    
-   De acordo com a opção escolhida, um novo menu abrirá e/ou novas informações podem ser solicitadas. A lógica é basicamente a mesma para tudo que segue após isso.
+   De acordo com a opção escolhida, um novo menu abrirá e novas informações podem ser solicitadas ou exibidas. A lógica é basicamente a mesma para tudo que segue após isso.
    
-   Sempre tente digitar as coisas certinho, sem erros de português, pois isso pode levar o código a caminhos que você não queria originalmente (ou comprometer os textos da sua referência.
+   Sempre tente digitar as coisas certinho, sem erros de português, pois isso pode levar o código a caminhos que você não queria originalmente (ou comprometer os textos da sua referência).
 
    Agora, vamos ver cada opção, separadamente.
 
@@ -76,7 +76,7 @@ let referencias = """
        [4]: Websites
        [5]: Monografia, dissertação ou tese.
 
-       Cada opção escolhida levará à uma nova parte do programa, que solicitará informações diferentes. Sempre se atente ao tipo de entrada que o programa solicita, certo? Elas podem ser do tipo inteiro ou do tipo string (texto). Por exemplo, ao solicitar a formatação de uma referência retirada de um livro, o programa perguntará a quantidade de autores, e você deve digitar um inteiro. Logo depois, dependendo da resposta, ele pergunta o nome dos autores, e você deve digitar uma String (texto).
+       Cada opção escolhida levará à uma nova parte do programa, que solicitará informações diferentes. Sempre se atente ao tipo de entrada que o programa solicita, certo? Elas podem ser do tipo inteiro ou do tipo string (texto). Por exemplo, ao solicitar a formatação de uma referência retirada de um livro, o programa perguntará a quantidade de autores, e você deve digitar um número inteiro. Logo depois, dependendo da resposta, ele pergunta o nome dos autores, e você deve digitar uma String (texto).
        
        Quando o nome do autor for solicitado, digite somente o primeiro, e não o nome completo. O sobrenome será solicitado em seguida.
 
@@ -89,7 +89,7 @@ let eixosPesquisa = """
 
 ► Buscar eixos de Pesquisa _______________
 
-   Nesta seção, o AcaPro irá te sugerir algumas grandes áreas e palavras chave que podem ajudar a encontrar um bom tema. Depois da exibição de sugestões, o programa é encerrado.
+   Nesta seção, o AcaPro irá te sugerir algumas grandes áreas e palavras chave que podem ajudar a encontrar um tema ou subtema. Depois da exibição de sugestões. Você pode juntar as áreas sugeridas com um tema que goste ou se identifique.
 
 
 """
@@ -176,14 +176,16 @@ Lembre-se: é totalmente permitido misturar essas áreas. A multidisciplinaridad
 
 Outro ponto a se pensar: é super importante que os seus projetos / soluções sejam acessíveis. E sempre, sempre pense nos impactos ambientais.
 
-Não esqueça das referências! <3
+Temas que tem muitas referências são bons, mas cuidado para não escolher um que já tenha saturado. Procure uma área que tenha referências para você se embasar, mas que te permita inovar em alguns pontos.
+
+E não esqueça das referências! <3
 
 
 """
 
 let palavrasChave = """
 
-Olá! Se você está buscando por referências de palavras chave, vamos entender que você já tem uma área de trabalho, tudo bem? Dessa forma, você pode tentar pesquisar assim: [sua área de pesquisa] +
+Olá! Se você está buscando por referências de palavras chave, vamos entender que você já tem uma área de pesquisa definida, tudo bem? Dessa forma, você pode tentar pesquisar assim: [sua área de pesquisa] +
     - ... notícias
     - ... tecnologias
     - ... problemáticas
@@ -194,9 +196,22 @@ Olá! Se você está buscando por referências de palavras chave, vamos entender
     - ... últimas atualizações / pesquisas
     - ... estudo de caso
 
-Lembre-se: a pesquisa com palavras chave em inglês oferece muito mais resultados! O Google Acadêmico é seu aliado mais importante agora, então use sem medo.
+Lembre-se: a pesquisa com palavras chave em inglês oferece muito mais resultados! O Google Acadêmico (e outros sites que hospedam esse tipo de trabalho) é seu aliado mais importante agora, então use sem medo.
 
 Outra ferramenta é o Google Trends, que informa quais assuntos de um determinado tópico estão sendo mais pesquisados no mundo todo. Caso queira, você também pode alterar os filtros de localização e exibir resultados só para o Brasil, por exemplo.
+
+
+-> Bons sites pra você usar como fonte:
+
+- SciELO
+- ERIC
+- BDTB
+- Portal de periódicos da CAPES
+- Google Acadêmico
+- Dialnet
+- WorldWideSciene
+- RefSeek
+- BASE
 
 
 """
@@ -209,10 +224,11 @@ Olá! Esta aplicação aceita os seguintes tipos de referência:
     volume que contém textos, imagens de modo a formar uma publicação que pode ser impressa ou online. Pode ter um ou muitos autores, subtítulo e edição.
 
 2. Revista ou artigo de periódico:
-    um periódico é uma publicação em papel ou meio eletrônico que é publicada em eventos que acontecem periodicamente, ou seja, em determinados intervalos de tempo. As revistas também são periódicas, mas tem formatações diferentes e servem para públicos alvos diferentes. Pode ter conteúdos jornalísticos, de entretenimento ou informativos.
+    um periódico é uma publicação em papel ou meio eletrônico que é publicada em eventos que acontecem periodicamente, ou seja, em determinados intervalos de tempo. As revistas também são periódicas, mas tem formatações diferentes e servem para públicos alvos diferentes e pode ter conteúdos jornalísticos, de entretenimento ou informativos.
 
 3. Artigo em evento:
     publicações em eventos, que divulgam o nome do evento e contribuem para a disseminação de conhecimento. Não necessariamente são periódicos e geralmente recebem o nome de "anais de eventos".
+
 
 """
 
@@ -224,19 +240,13 @@ let tiposDeReferencia2 = """
 5. Monografia, dissertação ou tese:
     trabalhos de conclusão de curso, em que a monografia é um de sentido amplo e a dissertação (que normalmente é apresentada no mestrado) e tese (nível de doutorado) são de sentido estrito.
 
-Para formatar esses tipos de referência, precisamos de algumas informações como nome do(s) autore(s), ano de publicação, título, subtítulo etc. Quando precisar formatá-las, tenha isso em mãos, beleza?
 
-Bons sites pra você usar como fonte:
-- SciELO
-- ERIC
-- BDTB
-- Portal de periódicos da CAPES
-- Google Acadêmico
-- Dialnet
-- WorldWideSciene
-- RefSeek
-- BASE
+-> Para formatar esses tipos de referência, precisamos de algumas informações como nome do(s) autore(s), ano de publicação, título, subtítulo e algumas que variam de acordo com a fonte. Quando precisar formatá-las, tenha isso em mãos, beleza?
+
+
 """
+
+
 
 let referencia = [tiposDeReferencia1, tiposDeReferencia2]
 

@@ -24,7 +24,7 @@ struct MonografiaDissertacaoTese {
 
 func informacoesBasicasMonografiaDissertacaoTese() -> String {
     let tituloTrabalho = lerString(message: "Digite o título do trabalho: ", primeiraMaiuscula: true)
-    let anoApresentacao = lerString(message: "Digite o ano de apresentação: ", primeiraMaiuscula: true)
+    let anoApresentacao = lerInt(message: "Digite o ano de apresentação: ")
     let numeroPaginas = lerInt(message: "Digite o total de páginas: ")
     let categoria = lerString(message: "Digite a categoria (área de concentração): ", primeiraMaiuscula: true)
     let instituição = lerString(message: "Digite a instituição: ", primeiraMaiuscula: true)

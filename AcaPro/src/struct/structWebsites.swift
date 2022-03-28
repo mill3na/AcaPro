@@ -9,31 +9,40 @@ import Foundation
 
 struct Websites {
     init() {
+        var continua_loop = true
         print("\nWebsites\n\n")
-        let tipoSite = lerString(message: "Digite o tipo de site de acordo com o padrão a seguir: \n[J]: Referências de sites de jornal;\n[R]: Referências de site de revistas eletrônicas;\n[P]: Referências de sites de publicação periódica;\n[I]: Referências de página inicial de sites;\n[E]: Referências de endereços eletrônicos ou enciclopédias ", primeiraMaiuscula: true)
-        
-        if tipoSite.uppercased() == "J" {
-            print("\n\nJornal")
-            print(siteDeJornal())
-        }
-        else if tipoSite.uppercased() == "R"{
-            print("\n\nRevistas eletrônicas")
-            print(siteDeRevistasEletronicas())
-        }
-        else if tipoSite.uppercased() == "P" {
-            print("\n\nPublicações periódicas")
-            print(sitesDePublicacoesPeriodicas())
-        }
-        else if tipoSite.uppercased() == "I" {
-            print("\n\nPágina inicial de sites")
-            print(pagina_inicial())
-        }
-        else if tipoSite.uppercased() == "E" {
-            print("\n\nEnciclopédias ou dicionários")
-            print(dicionariosOuEnciclopedias())
-        }
-        else {
-            print("Opção inválida. ")
+        while continua_loop {
+            
+            let tipoSite = lerString(message: "Digite o tipo de site de acordo com o padrão a seguir: \n[J]: Referências de sites de jornal;\n[R]: Referências de site de revistas eletrônicas;\n[P]: Referências de sites de publicação periódica;\n[I]: Referências de página inicial de sites;\n[E]: Referências de endereços eletrônicos ou enciclopédias ", primeiraMaiuscula: true)
+            
+            if tipoSite.uppercased() == "J" {
+                print("\n\nJornal")
+                print(siteDeJornal())
+                continua_loop = false
+            }
+            else if tipoSite.uppercased() == "R"{
+                print("\n\nRevistas eletrônicas")
+                print(siteDeRevistasEletronicas())
+                continua_loop = false
+            }
+            else if tipoSite.uppercased() == "P" {
+                print("\n\nPublicações periódicas")
+                print(sitesDePublicacoesPeriodicas())
+                continua_loop = false
+            }
+            else if tipoSite.uppercased() == "I" {
+                print("\n\nPágina inicial de sites")
+                print(pagina_inicial())
+                continua_loop = false
+            }
+            else if tipoSite.uppercased() == "E" {
+                print("\n\nEnciclopédias ou dicionários")
+                print(dicionariosOuEnciclopedias())
+                continua_loop = false
+            }
+            else {
+                print("Opção inválida. Por favor, tente novamente. \n")
+            }
         }
     }
     

@@ -16,18 +16,37 @@ func printStepByStep(multilineString: [String]){
     for opcao in multilineString{
         print(opcao)
         sleep(1)
-        let continuar = lerString(message: "Continuar [S/N]? ", true)
+        let continuar = lerString(message: "Continuar? [Digite N para interromper]:  ", primeiraMaiuscula: true)
         if continuar.uppercased() == "N"{
             print("\nSaindo do guia.. Até logo!")
             break
         }
     }
+    sleep(1)
+    print("\nVoltando ao menu principal...\n\n")
+    sleep(1)
 }
 
 func lerInt(message:String) -> Int {
-    print(message)
-    let number = Int(readLine() ?? "0")!
+    
+    var isValid = false
+    var number = Int()
+    repeat {
+        print(message)
+        
+        let input:String? = readLine()
+        
+        if let possivelNumero = input, let thisNumber = Int(possivelNumero), thisNumber >= 0{
+            number = thisNumber
+            isValid = true
+        } else {
+            print("Entrada inválida.")
+        }
+        
+    } while !isValid
+    
     return number
+    
 }
 
 func lerString(message:String, primeiraMaiuscula:Bool) -> String {
@@ -44,17 +63,14 @@ func capitalizingFirstLetter(string:String) -> String {
         let other = String(string.dropFirst())
         return first + other
     }
+
 func formatarReferencias(){
-    
     continueLoop = true
     while(continueLoop){
         
         printMenu(menu: fontes)
-        let option = lerInt(message: "\nDigite 0 para voltar ao menu anterior. \nPor favor, especifique a fonte: ")
+        let option = lerInt(message: "\nPor favor, especifique a fonte a partir do número correspondente: ")
     switch option{
-        case 0:
-            print("Voltando ao menu principal...")
-            break
         case 1:
             let referenciaLivro = Livro()
             print(referenciaLivro)
@@ -78,6 +94,9 @@ func formatarReferencias(){
             let referenciaMonografiaDissertacaoTese = MonografiaDissertacaoTese()
             print(referenciaMonografiaDissertacaoTese)
             continueLoop = false
+        case 6:
+            print("Voltando ao menu principal...")
+            continueLoop = false
 
         default:
             print("Por favor, digite uma opção válida!")
@@ -86,9 +105,9 @@ func formatarReferencias(){
     }
 }
 
-func nomeESobrenome() -> String {
-    let nomeDoAutor = lerString(message: "Digite o nome do autor: ", true)
-    let sobrenomeDoAutor = lerString(message: "Digite o sobrenome do autor: ", true)
+func nomeESobrenome(cardinalidadeAutor: String) -> String {
+    let nomeDoAutor = lerString(message: "Digite o primeiro nome do \(cardinalidadeAutor) autor: ", primeiraMaiuscula: true)
+    let sobrenomeDoAutor = lerString(message: "Digite o último nome do \(cardinalidadeAutor) autor: ", primeiraMaiuscula: true)
     return "\(sobrenomeDoAutor.uppercased()), \(nomeDoAutor)"
 }
 
@@ -99,9 +118,9 @@ func buscarEixosDePesquisa(){
     continueLoop = true
     while(continueLoop){
         printMenu(menu: menuPrincipalEixosDePesquisa)
-        let opcapUsuario = lerInt(message: "Por favor, digite uma opção: ")
+        let opcaoUsuario = lerInt(message: "Por favor, digite uma opção: ")
     
-    switch opcapUsuario{
+    switch opcaoUsuario{
         case 1:
             print(areasDePesquisa)
             continueLoop = false
@@ -120,4 +139,5 @@ func buscarEixosDePesquisa(){
         }
 }
 }
+
 

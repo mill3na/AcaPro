@@ -8,14 +8,11 @@
 import Foundation
 
 
-var primeiroMenu = ["Guia do usuário", "Formatar referências", "Buscar eixos de pesquisa", "Tipos de referência", "Processo de desenvolvimento", "Sair"]
-var fontes = ["Livro", "Revista ou artigo de periódico", "Artigo em evento", "Websites", "Monografia, dissertação ou tese"]
+
 
 print("Olá, User! Pronto para começar?\n\n")
 
-var continueLoop = false
-
-criarArquivo()
+var continueLoop = true
 
 while(continueLoop){
     printMenu(menu: primeiroMenu)
@@ -27,15 +24,23 @@ while(continueLoop){
             printStepByStep(multilineString: guiaDoUsuario)
         case 2:
             print("Formatar referências\n")
+            print("\n\n")
             print(formatarReferencias())
         case 3:
             print("Buscar eixos de pesquisa\n")
+            print("\n\n")
             print(areasDePesquisa)
+            sleep(1)
+            print("\nVoltando ao menu principal...\n\n")
+            sleep(1)
+        
         case 4:
             print("Tipos de referência\n")
+            print("\n\n")
             printStepByStep(multilineString: referencia)
         case 5:
             print("Processo de desenvolvimento\n")
+            print("\n\n")
             printStepByStep(multilineString: desenvolvimento)
         case 6:
             print("Sair\nAté logo!\n")
