@@ -72,9 +72,9 @@
 		F898E14427D8C31D00F0EAD3 /* AcaPro */ = {
 			isa = PBXGroup;
 			children = (
+				F8A55DF027E35DCD00CC2A2A /* readme.md */,
 				F898E14527D8C31D00F0EAD3 /* main.swift */,
 				F8C8F80D27E0B749004F502C /* src */,
-				F8A55DF027E35DCD00CC2A2A /* readme.md */,
 			);
 			path = AcaPro;
 			sourceTree = "<group>";

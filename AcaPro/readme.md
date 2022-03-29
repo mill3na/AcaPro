@@ -24,7 +24,18 @@ O projeto foi pensado para otimizar o processo de escrita acadêmica e pode ser 
 
 ## Para começar... 
 
-Clone ou baixe o repositório a partir do github e acesse a pasta do projeto. Você deve rodar o arquivo main.swift no terminal ou console do `Xcode`. 
+### Requisitos 
+
+* versão mais recente de macOS 10.12ˆ
+* ter um MacBook
+* instalar Swift configurar as variáveis de ambiente
+* instalar o xcode e rodar o projeto pelo o próprio Xcode é o ideal.
+* instalar e configurar o git 
+
+Clone ou baixe o repositório a partir do github usando o comando 
+
+``` https://github.com/mill3na/AcaPro.git ```
+Acesse a pasta do projeto. Você deve rodar o arquivo main.swift no terminal ou console do `Xcode`.
 
 
 
