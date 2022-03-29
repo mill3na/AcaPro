@@ -25,9 +25,9 @@ func informacoesBasicasRevistaOuPeriodico() -> String {
     let tituloArtigo = lerString(message: "Digite o título do artigo: ", primeiraMaiuscula: true)
     let tituloRevista = lerString(message: "Digite o título da revista: ", primeiraMaiuscula: true)
     let localPublicação = lerString(message: "Digite o local de publicação: ", primeiraMaiuscula: true)
-    let numeroVolume = lerInt(message: "Digite o número do volume: ")
+    let numeroVolume = lerInt(message: "Digite o número do volume: ", ano: false)
     let paginasInicialFinal = lerString(message: "Digite as páginas inicial e final <x - y>: ", primeiraMaiuscula: false)
-    let anoPublicação = lerInt(message: "Digite o ano de publicação: ")
+    let anoPublicação = lerInt(message: "Digite o ano de publicação: ", ano: true)
     
     let temMesPublicacao = lerString(message: "Você tem acesso ao mês de publicação [S/N]? ", primeiraMaiuscula: true)
     

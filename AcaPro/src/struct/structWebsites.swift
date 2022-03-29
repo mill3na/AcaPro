@@ -47,9 +47,9 @@ struct Websites {
     }
     
     func diaMesAnoDeAcesso () -> String {
-        let diaAcesso = lerInt(message: "Digite o dia de acesso com dois algarismos: ")
+        let diaAcesso = lerInt(message: "Digite o dia de acesso com dois algarismos: ", ano: false)
         var mesAcesso = lerString(message: "Digite o mês de acesso: ", primeiraMaiuscula: false)
-        let anoAcesso = lerInt(message: "Digite o ano de acesso: ")
+        let anoAcesso = lerInt(message: "Digite o ano de acesso: ", ano: true)
        
         mesAcesso = formataMes(mes_usuario: mesAcesso)
         
@@ -66,9 +66,9 @@ struct Websites {
         let tituloMateria = lerString(message: "Digite o título da matéria: ", primeiraMaiuscula: true)
         let nomeJornal = lerString(message: "Digite o nome do jornal: ", primeiraMaiuscula: true)
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
-        let diaPublicacao = lerInt(message: "Digite o dia de publicação da matéria: ")
+        let diaPublicacao = lerInt(message: "Digite o dia de publicação da matéria: ", ano: false)
         var mesPublicacao = lerString(message: "Digite o mês de publicação da matéria: ", primeiraMaiuscula: false)
-        let anoPublicacao = lerInt(message: "Digite o ano de publicação da matéria: ")
+        let anoPublicacao = lerInt(message: "Digite o ano de publicação da matéria: ", ano: true)
         let diaMesAno = diaMesAnoDeAcesso()
         mesPublicacao = formataMes(mes_usuario: mesPublicacao)
         
@@ -138,11 +138,11 @@ struct Websites {
         let tituloArtigo = lerString(message: "Digite o título do artigo: ", primeiraMaiuscula: true)
         let tituloRevista = lerString(message: "Digite o título da revista: ", primeiraMaiuscula: true)
         let localPublicacao = lerString(message: "Digite o local de publicação: ", primeiraMaiuscula: true)
-        let volumeExemplar = lerInt(message: "Digite o volume do exemplar: ")
-        let numeroExemplar = lerInt(message: "Digite o número do exemplar: ")
+        let volumeExemplar = lerInt(message: "Digite o volume do exemplar: ", ano: false)
+        let numeroExemplar = lerInt(message: "Digite o número do exemplar: ", ano: false)
         let paginasInicialFinal = lerString(message: "Digite as páginas inicial e final <x-y>: ", primeiraMaiuscula: false)
         let mesPublicacao = lerString(message: "Digite o mês de publicação: ", primeiraMaiuscula: false)
-        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ")
+        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ", ano: true)
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
         let diaMesAno = diaMesAnoDeAcesso()
                 
@@ -153,7 +153,7 @@ struct Websites {
     func sitesDePublicacoesPeriodicas() -> String{
         let tituloMateria = lerString(message: "Digite o título da matéria: ", primeiraMaiuscula: true)
         let nomeSite = lerString(message: "Digite o nome do site: ", primeiraMaiuscula: true)
-        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ")
+        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ", ano: true)
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
         let diaMesAno = diaMesAnoDeAcesso()
         
@@ -170,7 +170,7 @@ struct Websites {
     func pagina_inicial() -> String {
         let autorOrganizacao = lerString(message: "Digite o nome do autor ou organização: ", primeiraMaiuscula: true)
         let nomeSite = lerString(message: "Digite o nome do site: ", primeiraMaiuscula: true)
-        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ")
+        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ", ano: true)
         let ementa = lerString(message: "Digite a descrição da pesquisa: ", primeiraMaiuscula: true)
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
         let diaMesAno = diaMesAnoDeAcesso()
@@ -182,7 +182,7 @@ struct Websites {
         let tituloVerbeteConceito = lerString(message: "Digite o título do verbete/conceito: ", primeiraMaiuscula: true)
         let nome_da_enciclopedia_dicionario = lerString(message: "Digite o nome da enciclopédia/dicionário: ", primeiraMaiuscula: true)
         let autorEditora = lerString(message: "Digite o responsável pela publicação ou a editora: ", primeiraMaiuscula: true)
-        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ")
+        let anoPublicacao = lerInt(message: "Digite o ano de publicação: ", ano: true)
         let url = lerString(message: "Cole aqui a url (link) da pesquisa: ", primeiraMaiuscula: false)
         let diaMesAno = diaMesAnoDeAcesso()
                 

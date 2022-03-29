@@ -16,7 +16,7 @@ var continueLoop = true
 
 while(continueLoop){
     printMenu(menu: primeiroMenu)
-    let opcaoUsuario = lerInt(message: "Por favor, escolha uma das opções.  ")
+    let opcaoUsuario = lerInt(message: "Por favor, escolha uma das opções.  ", ano: false)
 
     switch opcaoUsuario{
         case 1:

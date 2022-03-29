@@ -27,7 +27,20 @@ func printStepByStep(multilineString: [String]){
     sleep(1)
 }
 
-func lerInt(message:String) -> Int {
+
+func anoQuatroDigitos(ano:String) -> Bool{
+    var count = 0
+    for _ in ano{
+        count += 1
+    }
+    if count == 4{
+        return true
+    }else{
+        return false
+}
+}
+
+func lerInt(message:String, ano: Bool) -> Int {
     
     var isValid = false
     var number = Int()
@@ -38,9 +51,17 @@ func lerInt(message:String) -> Int {
         
         if let possivelNumero = input, let thisNumber = Int(possivelNumero), thisNumber >= 0{
             number = thisNumber
-            isValid = true
+            if ano == true{
+                if anoQuatroDigitos(ano: possivelNumero){
+                    isValid = true
+                } else{
+                    print("\nDigite um ano com quatro dígitos.\n")
+                }
+            } else{
+                isValid = true
+            }
         } else {
-            print("Entrada inválida.")
+            print("\nEntrada inválida.\n")
         }
         
     } while !isValid
@@ -69,7 +90,7 @@ func formatarReferencias(){
     while(continueLoop){
         
         printMenu(menu: fontes)
-        let option = lerInt(message: "\nPor favor, especifique a fonte a partir do número correspondente: ")
+        let option = lerInt(message: "\nPor favor, especifique a fonte a partir do número correspondente: ", ano: false)
     switch option{
         case 1:
             let referenciaLivro = Livro()
@@ -118,7 +139,7 @@ func buscarEixosDePesquisa(){
     continueLoop = true
     while(continueLoop){
         printMenu(menu: menuPrincipalEixosDePesquisa)
-        let opcaoUsuario = lerInt(message: "Por favor, digite uma opção: ")
+        let opcaoUsuario = lerInt(message: "Por favor, digite uma opção: ", ano: false)
     
     switch opcaoUsuario{
         case 1:
