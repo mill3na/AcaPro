@@ -72,25 +72,11 @@ func lerInt(message:String, ano: Bool) -> Int {
 
 func lerString(message:String, primeiraMaiuscula:Bool) -> String {
     print(message)
-    var continue_loop = true
-    var text = ""
-    while(continue_loop){
-        text = String(readLine() ?? " ")
-        if primeiraMaiuscula{
-            text = primeiraLetraMaiuscula(string: text)
-        }
-        
-        let inteiros = CharacterSet.decimalDigits
-
-        let decimalRange = text.rangeOfCharacter(from: inteiros)
-
-        if decimalRange == nil {
-            continue_loop = false
-
-        }else{
-            print("Digite um nome valido!\nTente novamente: ")
-        }
-        }
+    
+    var text = String(readLine() ?? " ")
+    if primeiraMaiuscula{
+        text = capitalizingFirstLetter(string: text)
+    }
     return text
 }
 
