@@ -1,4 +1,5 @@
 <h1 align="center"> AcaPro </h1>
+<h3 align="center"> Auxiliar de produção acadêmica </h3>
 
 Autora: Milena Maia Araújo
 Contribuidores: Yago Marques
@@ -40,8 +41,22 @@ Acesse a pasta do projeto. Você deve rodar o arquivo main.swift no terminal ou 
 
 
 ## Em tempo de execução:
-Ao iniciar o programa, o primeiro menu aparecerá e te fornecerá opções sobre as funcionalidades gerais do AcaPro (como formatação de referências, busca por eixos de pesquisa etc). Para saber mais sobre cada funcionalidade do programa, acesse o Guia do usuário (primeira opção).
+Ao iniciar o programa, o primeiro menu aparecerá e te fornecerá opções sobre as funcionalidades gerais do AcaPro (como formatação de referências, busca por eixos de pesquisa etc). É justamente esse p propósito do AcaPro, te ajudar a realizar suas escritas acadêmicas, da seguinte maneira:
+    [x] Formata suas referências: e para isso você deve nos fornecer alguns dados
+    [x] Te ajuda a buscar novas referências (tanto em relação aos assuntos como em relação a sites confiáveis)
+    [x] Te ajuda a entender melhor o processo de desenvolvimento de produção acadêmica.
 
-Você deve acessar as opções pelo número correspondente e, a depender da opção escolhida, forneça as informações solicitadas. Sempre tente fornecer os dados com a grafia correta.
+Para saber mais sobre cada funcionalidade do programa, acesse o Guia do usuário (primeira opção do primeiro menu).
 
-Caso você escolha a opção `Formatar Referências`, tome cuidado ao finalizar a execução do script, pois o programa não salva as referências automaticamente, então 
+Você deve acessar as opções pelo número correspondente e, a depender da opção escolhida, forneça as informações solicitadas. Sempre tente fornecer os dados com a grafia correta (e no tipo de dado correto).
+
+Caso você escolha a opção `Formatar Referências`, tome cuidado ao finalizar a execução do script, pois o programa não salva as referências automaticamente. Salve esses dados em outro local para que não sejam perdidos.
+
+
+## Dúvidas ou sugestões
+
+Você pode me ajudar a melhorar o programa, se assim desejar, na sessão de Issues. Feedbacks e sugestões são sempre bem vindos! <3
+
+## Autoria
+Desevolvido por Milena Maia Araújo
+
