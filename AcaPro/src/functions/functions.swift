@@ -72,14 +72,29 @@ func lerInt(message:String, ano: Bool) -> Int {
 
 func lerString(message:String, primeiraMaiuscula:Bool) -> String {
     print(message)
-    var text = String(readLine() ?? " ")
-    if primeiraMaiuscula{
-        text = capitalizingFirstLetter(string: text)
-    }
+    var continue_loop = true
+    var text = ""
+    while(continue_loop){
+        text = String(readLine() ?? " ")
+        if primeiraMaiuscula{
+            text = primeiraLetraMaiuscula(string: text)
+        }
+        
+        let inteiros = CharacterSet.decimalDigits
+
+        let decimalRange = text.rangeOfCharacter(from: inteiros)
+
+        if decimalRange == nil {
+            continue_loop = false
+
+        }else{
+            print("Digite um nome valido!\nTente novamente: ")
+        }
+        }
     return text
 }
 
-func capitalizingFirstLetter(string:String) -> String {
+func primeiraLetraMaiuscula(string:String) -> String {
         let first = String(string.prefix(1)).capitalized
         let other = String(string.dropFirst())
         return first + other
@@ -93,27 +108,22 @@ func formatarReferencias(){
         let option = lerInt(message: "\nPor favor, especifique a fonte a partir do número correspondente: ", ano: false)
     switch option{
         case 1:
-            let referenciaLivro = Livro()
-            print(referenciaLivro)
+            Livro()
             continueLoop = false
         
         case 2:
-            let referenciaRevistaOuPeriodico = RevistaOuPeriodico()
-            print(referenciaRevistaOuPeriodico)
+            RevistaOuPeriodico()
             continueLoop = false
         
         case 3:
-            let referenciaArtigoEmEvento = ArtigoEmEvento()
-            print(referenciaArtigoEmEvento)
+            ArtigoEmEvento()
             continueLoop = false
         case 4:
-            let referenciaWebsites = Websites()
-            print(referenciaWebsites)
+            Websites()
             continueLoop = false
         case 5:
             
-            let referenciaMonografiaDissertacaoTese = MonografiaDissertacaoTese()
-            print(referenciaMonografiaDissertacaoTese)
+            MonografiaDissertacaoTese()
             continueLoop = false
         case 6:
             print("Voltando ao menu principal...")

@@ -25,7 +25,7 @@ while(continueLoop){
         case 2:
             print("Formatar referências\n")
             print("\n\n")
-            print(formatarReferencias())
+            formatarReferencias()
         case 3:
             print("Buscar eixos de pesquisa\n")
             print("\n\n")
