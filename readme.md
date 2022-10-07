@@ -9,10 +9,9 @@ Quer escrever seus artigos, publicações, periódicos e demais textos acadêmic
 
 Ele terá funcionalidades que otimizarão o processo de escrita, como:
 
-1. Formatação de referências no padrão ABNT
-2. Oferece palavras chave / eixos de pesquisa, que podem inspirar o pesquisador que ainda não definiu seu tema 
-3. Salva suas formatações em arquivo de texto automaticamente
-4. Dá opções de sites e fontes realmente confiáveis para embasar suas pesquisas e muito mais.
+1. Formatação de referências no padrão ABNT;
+2. Oferece palavras chave / eixos de pesquisa, que podem inspirar o pesquisador que ainda não definiu seu tema ;
+3. Dá opções de sites e fontes realmente confiáveis para embasar suas pesquisas e muito mais.
 
 Ah! O AcaPro é um programa CLI. Não se assuste quando eu digo CLI, prometo que vai ser bem simples de usar :) 
 
@@ -27,11 +26,11 @@ O projeto foi pensado para otimizar o processo de escrita acadêmica e pode ser 
 
 ### Requisitos 
 
-* versão mais recente de macOS 10.12ˆ
-* ter um MacBook
-* instalar Swift configurar as variáveis de ambiente
-* instalar o xcode e rodar o projeto pelo o próprio Xcode é o ideal.
-* instalar e configurar o git 
+* versão mais recente de macOS 10.12ˆ;
+* ter um MacBook;
+* instalar Swift configurar as variáveis de ambiente;
+* instalar o xcode e rodar o projeto pelo o próprio Xcode é o ideal;
+* instalar e configurar o git;
 
 Clone ou baixe o repositório a partir do github usando o comando 
 
