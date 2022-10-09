@@ -92,24 +92,23 @@ func formatarReferencias(){
         
         printMenu(menu: fontes)
         let option = lerInt(message: "\nPor favor, especifique a fonte a partir do número correspondente: ", ano: false)
-    switch option{
+    switch option {
         case 1:
-            Livro()
+            LivroViewModel().start()
             continueLoop = false
         
         case 2:
-            RevistaOuPeriodico()
+            RevistaOuPeriodicoViewModel().start()
             continueLoop = false
         
         case 3:
-            ArtigoEmEvento()
+            ArtigoEmEventoViewModel().start()
             continueLoop = false
         case 4:
-            Websites()
+            WebsitesViewModel().start()
             continueLoop = false
         case 5:
-            
-            MonografiaDissertacaoTese()
+            MonografiaDissertacaoTeseViewModel().start()
             continueLoop = false
         case 6:
             print("Voltando ao menu principal...")

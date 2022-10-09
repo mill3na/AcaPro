@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8251FAA27DA319800D6EEC7 /* structLivro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8251FA927DA319800D6EEC7 /* structLivro.swift */; };
-		F84610D427DB94620080B269 /* structRevistaPeriodico.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84610D327DB94620080B269 /* structRevistaPeriodico.swift */; };
-		F8525E9B27DF5F6E001B2646 /* structArtigoEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8525E9A27DF5F6E001B2646 /* structArtigoEvento.swift */; };
-		F8525E9D27DF6700001B2646 /* structMonografiaDissertacaoTese.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8525E9C27DF6700001B2646 /* structMonografiaDissertacaoTese.swift */; };
-		F8525E9F27DF6AFA001B2646 /* structWebsites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8525E9E27DF6AFA001B2646 /* structWebsites.swift */; };
+		DF0B856928F32E97001C53C3 /* LivroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B856828F32E97001C53C3 /* LivroViewModel.swift */; };
+		DF0B856D28F32FFC001C53C3 /* RevistaOuPeriodicoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B856C28F32FFC001C53C3 /* RevistaOuPeriodicoViewModel.swift */; };
+		DF0B856F28F330A7001C53C3 /* ArtigoEmEventoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B856E28F330A7001C53C3 /* ArtigoEmEventoViewModel.swift */; };
+		DF0B857128F3315C001C53C3 /* MonografiaDissertacaoTeseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B857028F3315C001C53C3 /* MonografiaDissertacaoTeseViewModel.swift */; };
+		DF0B857328F331BB001C53C3 /* WebsitesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B857228F331BB001C53C3 /* WebsitesViewModel.swift */; };
 		F898E14627D8C31D00F0EAD3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898E14527D8C31D00F0EAD3 /* main.swift */; };
 		F898E14F27D8DC4C00F0EAD3 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898E14E27D8DC4C00F0EAD3 /* functions.swift */; };
 		F8A55DEC27E34C5F00CC2A2A /* multilineStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A55DEB27E34C5F00CC2A2A /* multilineStrings.swift */; };
@@ -30,11 +30,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F8251FA927DA319800D6EEC7 /* structLivro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structLivro.swift; sourceTree = "<group>"; };
-		F84610D327DB94620080B269 /* structRevistaPeriodico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structRevistaPeriodico.swift; sourceTree = "<group>"; };
-		F8525E9A27DF5F6E001B2646 /* structArtigoEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structArtigoEvento.swift; sourceTree = "<group>"; };
-		F8525E9C27DF6700001B2646 /* structMonografiaDissertacaoTese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structMonografiaDissertacaoTese.swift; sourceTree = "<group>"; };
-		F8525E9E27DF6AFA001B2646 /* structWebsites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structWebsites.swift; sourceTree = "<group>"; };
+		DF0B856828F32E97001C53C3 /* LivroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewModel.swift; sourceTree = "<group>"; };
+		DF0B856C28F32FFC001C53C3 /* RevistaOuPeriodicoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevistaOuPeriodicoViewModel.swift; sourceTree = "<group>"; };
+		DF0B856E28F330A7001C53C3 /* ArtigoEmEventoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtigoEmEventoViewModel.swift; sourceTree = "<group>"; };
+		DF0B857028F3315C001C53C3 /* MonografiaDissertacaoTeseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonografiaDissertacaoTeseViewModel.swift; sourceTree = "<group>"; };
+		DF0B857228F331BB001C53C3 /* WebsitesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsitesViewModel.swift; sourceTree = "<group>"; };
 		F898E14227D8C31D00F0EAD3 /* AcaPro */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AcaPro; sourceTree = BUILT_PRODUCTS_DIR; };
 		F898E14527D8C31D00F0EAD3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F898E14E27D8DC4C00F0EAD3 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
@@ -75,27 +75,19 @@
 			children = (
 				F8B11AAE28F054F3005DE5D5 /* View */,
 				F8B11AAD28F054E2005DE5D5 /* ViewModel */,
-				F8B11AAB28F054D4005DE5D5 /* Model */,
 			);
 			path = AcaPro;
-			sourceTree = "<group>";
-		};
-		F8B11AAB28F054D4005DE5D5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F8251FA927DA319800D6EEC7 /* structLivro.swift */,
-				F84610D327DB94620080B269 /* structRevistaPeriodico.swift */,
-				F8525E9A27DF5F6E001B2646 /* structArtigoEvento.swift */,
-				F8525E9C27DF6700001B2646 /* structMonografiaDissertacaoTese.swift */,
-				F8525E9E27DF6AFA001B2646 /* structWebsites.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F8B11AAD28F054E2005DE5D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				F8B11AAF28F05573005DE5D5 /* Resources */,
+				DF0B856828F32E97001C53C3 /* LivroViewModel.swift */,
+				DF0B856C28F32FFC001C53C3 /* RevistaOuPeriodicoViewModel.swift */,
+				DF0B856E28F330A7001C53C3 /* ArtigoEmEventoViewModel.swift */,
+				DF0B857028F3315C001C53C3 /* MonografiaDissertacaoTeseViewModel.swift */,
+				DF0B857228F331BB001C53C3 /* WebsitesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -183,14 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F84610D427DB94620080B269 /* structRevistaPeriodico.swift in Sources */,
+				DF0B856D28F32FFC001C53C3 /* RevistaOuPeriodicoViewModel.swift in Sources */,
+				DF0B857328F331BB001C53C3 /* WebsitesViewModel.swift in Sources */,
 				F898E14627D8C31D00F0EAD3 /* main.swift in Sources */,
-				F8525E9B27DF5F6E001B2646 /* structArtigoEvento.swift in Sources */,
+				DF0B857128F3315C001C53C3 /* MonografiaDissertacaoTeseViewModel.swift in Sources */,
 				F898E14F27D8DC4C00F0EAD3 /* functions.swift in Sources */,
-				F8251FAA27DA319800D6EEC7 /* structLivro.swift in Sources */,
-				F8525E9D27DF6700001B2646 /* structMonografiaDissertacaoTese.swift in Sources */,
+				DF0B856928F32E97001C53C3 /* LivroViewModel.swift in Sources */,
 				F8A55DEC27E34C5F00CC2A2A /* multilineStrings.swift in Sources */,
-				F8525E9F27DF6AFA001B2646 /* structWebsites.swift in Sources */,
+				DF0B856F28F330A7001C53C3 /* ArtigoEmEventoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
