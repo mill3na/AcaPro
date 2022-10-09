@@ -75,7 +75,7 @@ func lerString(message:String, primeiraMaiuscula:Bool) -> String {
     
     var text = String(readLine() ?? " ")
     if primeiraMaiuscula{
-        text = capitalizingFirstLetter(string: text)
+        text = text.capitalized
     }
     return text
 }
